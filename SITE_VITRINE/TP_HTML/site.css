@@ -1,0 +1,313 @@
+
+@font-face {
+    font-family: 'myHappyselfie'; 
+    src: url('') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    background-color: rgb(31, 31, 31);
+    font-family: 'myHappyselfie';
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+nav{
+    position: sticky;
+    display: flex;
+    background-image: linear-gradient(to right, beige, white, grey);
+    height: 40px;
+    left:-100%;
+    top: 10px;
+    width: 100%;
+}
+header nav a{
+    display: inline-block;
+    flex-flow: row;
+    font-size: x-large;
+}
+header span{
+    width: 25%;
+    margin-left: auto;
+    margin-right:auto;
+    border-spacing: 5px 1rem;
+    border-right: 2px solid black;
+    text-align: center;
+}
+header nav .media{
+    display: inline-block;
+    flex-flow: row;
+    font-size: x-large;
+}
+.sousmenu{
+    display:none;
+    background-image: linear-gradient(to right, beige, white, grey);
+    border: 2px solid black;
+}
+
+.navmed {
+    position: relative;
+}
+
+footer{
+    color: beige;
+}
+.navmed:hover .sousmenu{
+    display: block;
+    position: absolute; 
+    left: 0; 
+    top: 100%;
+    width: 100%;
+}
+.sousmenu a{    
+    margin-left: 10%;
+}
+a:link{
+    color: rgb(206, 127, 9);
+}
+a:hover{    
+    color: rgb(33, 158, 33);
+}
+a:visited{
+    color: blueviolet;
+}
+a:hover:visited{
+    color: rgb(34, 32, 165);
+}
+p{
+    color: beige;
+}
+.Titrep1{
+    width: 80%;
+    color: beige;   
+    text-align: center;
+    text-shadow:2px 2px 4px;
+}
+.centre{
+    display: flex;   
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 80%;
+    justify-content: center;
+}
+.logo{  
+    width: 100%;
+    display: flex;
+    flex-direction: row;    
+    justify-content: flex-end;
+    margin-bottom: 20px;
+    height: 40px;
+}
+.logos{
+    width: 40px;
+    border: 2px solid beige;
+    border-spacing: 5px;
+}
+.facebook{
+    bottom: 0;      
+}
+p{
+    color: beige;
+}
+div p strong{
+    float: left;
+}
+.sectionphotomoi{
+    display: flex;
+    width: 80%;
+    justify-content: center;
+}
+.photo_moi{
+    border: 4px solid beige;
+    width: 250px;
+    height: 300px;
+    display: inline;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    top: 10%;
+}
+.photo_moi:hover:after{
+    content :attr(title);
+    float: bottom;
+    color: beige;
+}
+.aside{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+.frame{
+    width: 20%;
+    height: 50%;
+    background-color: rgb(31,31,31);
+    --corner: 0.75em;
+    --bg:   rgba(223, 217, 217, 0.81);
+    background-image:
+      radial-gradient(calc(2 * var(--corner)) at    0    0, transparent 50%, var(--bg) 50%, var(--bg) 99.99%, transparent 99.99%), /* Safari will break if we put 100% */
+      radial-gradient(calc(2 * var(--corner)) at    0 100%, transparent 50%, var(--bg) 50%, var(--bg) 99.99%, transparent 99.99%),
+      radial-gradient(calc(2 * var(--corner)) at 100% 100%, transparent 50%, var(--bg) 50%, var(--bg) 99.99%, transparent 99.99%),
+      radial-gradient(calc(2 * var(--corner)) at 100%    0, transparent 50%, var(--bg) 50%, var(--bg) 99.99%, transparent 99.99%),
+      linear-gradient(to  right, transparent var(--corner), var(--bg) var(--corner), var(--bg) calc(100% - var(--corner)), transparent calc(100% - var(--corner))),
+      linear-gradient(to bottom, transparent var(--corner), var(--bg) var(--corner), var(--bg) calc(100% - var(--corner)), transparent calc(100% - var(--corner)));
+}
+/* section{
+    display: inline-block;
+    width: 80%;
+} */
+.text1{
+    width: 100%;
+    text-align: left;
+}
+.image2{
+    width: 350px;
+    height: 400px;
+}
+.image3{
+    width: 350px;
+    height: 400px;
+}
+/* footer: il faut changer la direction en colone et il faut mettre un display flex sur le body et utiliser flexgrow avec la valeur a 1 sur le body(les div) */
+/* et pour les medias querys il faut utiliser les flexboxs et utiliser le order */
+
+
+/* page cursus scolaire */
+
+.titrep2{
+    color: beige;
+    text-align: center;
+    text-shadow: 1.5px 2px 3px;
+}
+#rectangle{
+    width: 100px;
+    height: 25 px;
+    background-color: beige;
+}
+.disclaimer{
+    /*position: relative;*/
+    color: rgb(0, 0, 0);
+    width: 100px;
+    height: 25px;
+    background-color: beige;
+    box-shadow: inset;
+}
+.divphoto{
+    display: flex;
+    text-align: center;
+}
+.image_stvic{
+    float:left ;
+    width: 100px;
+    height: 50px;
+}
+.image_marcel{
+    float: left;
+    width: 100px;
+    height: 50px;
+}
+.image_godefroy{
+    float: left;
+    width: 100px;
+    height: 50px;
+}
+.image_iut{
+    float: left;
+    width: 100px;
+    height: 50px;
+}
+.footercursus{
+    color: beige;
+    font-size: large;
+}
+/* page activités extra scolaire */
+
+.titrep3{
+    color: beige;   
+    text-align: center;
+    text-shadow:2px 2px 4px;
+}
+.barre_recherche{
+    background-image: linear-gradient(to right, beige, white, grey);
+    height: 20px;
+    position: fixed;
+    top: 10px;
+    color: black;
+    width: 100%;
+    text-align: center;
+}
+table{
+    display: flex;
+    border-collapse: collapse;
+    table-layout: fixed;
+    caption-side: Bottom;
+    width: 100%;
+    /*border: 2px solid beige;
+    margin-left: auto;
+    margin-right: auto;*/
+    justify-content: center;
+}
+table, tr, th, p{
+    color: beige;
+}   
+th{
+    border:2px solid beige;
+}
+.image_pingpong{
+    width: 250px;
+    height: 150px;
+}
+.image_hoola_hoop{
+    width: 250px;
+    height: 150px;
+}
+.image_zoumba{
+    width: 250px;
+    height: 150px;
+}
+
+/* page video */
+
+.titrep4{
+    color: beige;
+    text-align: center;
+    text-shadow:2px 2px 4px;
+}
+.video{
+    display: flex;
+    width: 500px;
+    height: 350px;
+}
+.soustitre{
+    display: flex;
+    justify-content: center;
+}
+.sousoustitre{
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+}
+
+/*page form*/
+
+.titrep6{
+    color: beige;
+    text-align: center;
+}
+.divform{
+    display: flex;
+    justify-content: center;
+}
+.form{
+    width: 30%;
+    height: 50%;
+    background-image: linear-gradient(to right,white, grey);
+    border-radius: 5%;
+    border: 4px solid beige;
+}
+div form div span{
+    color: black;
+}
+div form label{
+    color: black;
+}
