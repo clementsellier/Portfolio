@@ -1,49 +1,65 @@
 body{
     background-color: rgb(31, 31, 31);
-    font-family: 'myHappyselfie';
-    min-height: 100vh;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    flex-direction: row;   
 }
 
 p{
-    color: beige;
+    color: black;
 }
 
 h1, h2, h3, h4, h5, h6{
     color: beige;
 }
 
-nav{
-    position: sticky;
-    display: flex;
-    background-image: linear-gradient(to right, beige, white, grey);
-    height: 40px;
-    left:-100%;
-    top: 10px;
-    width: 100%;
-    border: 4px solid grey;
-}
-
-.logo{
-    position: absolute;
+header {
+    position: fixed; 
     display: flex;
     justify-content: center;
-    align-items: center;
-    width: 100px;       
-    height: 100px;       
-    border-radius: 50%;
-    background-color: rgb(31, 31, 31);
-    border: 4px solid gray;
-    top: 1px;
+    width: 100%;
+    z-index: 1;
 }
 
-.bordure-interne{
-    width: 95px;       
-    height: 95px;       
-    border-radius: 50%;
-    background-color: rgb(31, 31, 31);
-    border: 2px solid gray;
+.nav{
+    top: 0;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 30px;
+}
+
+.Liens{
+    display: none;
+    position: absolute;
+}
+
+.NavFont{
+    position: absolute;
+}
+
+.NavFont {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    height: 30px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    background-image: linear-gradient(rgb(31, 31, 31), transparent);
+    overflow: hidden; 
+    width: 100%;
+    z-index: 1;
+}
+
+.Liens{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-items: end;
+    z-index: auto;
 }
 
 header nav span{
@@ -54,20 +70,237 @@ header nav span{
 
 header nav span a{
     text-decoration: none;
+    height: auto;
 }
 
-header nav span a:hover{
-    text-decoration: underline;
-}
 
 a:link{
-    color: black;
+    color: beige;
 }
 
-a:hover{    
-    color: rgb(17, 31, 230);
+nav span a:hover .nav{    
+    background-image: linear-gradient(beige, transparent);
 }
 
 a:visited{
-    color: blueviolet;
+    color: beige;
+}
+
+span div article, h1, h2,h4, h5, h6{
+    color: black;
+}
+
+.corpsPage{
+    background-color: rgb(31, 31, 31);
+    display: flex;
+    flex-direction: column;
+}
+
+#Accueil{
+    display: flex;
+    background-color: rgb(118, 118, 116);
+    box-shadow:inset #5f5a5a 2px 2px 4px;
+    width: 100%;
+}
+
+#Accueil article p,h2{
+    color: rgb(184, 179, 179);
+}
+
+.placeMoi{
+    width:60%;
+}
+
+.placePhoto{
+    flex-grow: 1;
+}
+
+.Moi {
+    background-color: rgb(35, 33, 30);
+    border: 2px solid black;
+    box-shadow: 2px 2px 2px white;
+    border-radius: 15px;
+    width: 65%;
+    height: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+    top: 10%;
+    left: 20%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-height: 80%;
+    overflow-y: scroll; 
+    scrollbar-color: grey transparent;
+    scrollbar-width: thin; 
+}
+
+::-webkit-scrollbar {
+    width: 8px; 
+}
+    
+::-webkit-scrollbar-thumb {
+    background-color: grey; 
+    border-radius: 10px; 
+}
+    
+::-webkit-scrollbar-track {
+    background: transparent; 
+}
+
+.Moi p {
+    margin: 0;
+}
+
+.PhotoMoi {
+    position: relative;
+    border: 2px solid black;
+    box-shadow: 2px 2px 2px white;
+    border-radius: 15px;
+    width: 50%;
+    height: 65%;
+    overflow: hidden; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 20%;
+    left:40%;
+}
+
+.PhotoDeMoi {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  
+}
+
+
+#Formations {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(57, 56, 54);
+    padding: 20px;
+}
+
+.timeline {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #ccc; 
+    z-index: -1; 
+}
+
+.timeline-item {
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.timeline-content {
+    display: inline-block;
+    width: 45%;
+    background: #f5f5f5;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.timeline-item h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(124, 124, 124);
+    text-shadow: 1px 1px 2px grey;
+}
+
+.timeline-item p {
+    font-size: 14px;
+    color: #333;
+}
+
+#Competences{
+    background-color: rgb(118, 118, 116);
+}
+
+#Experiences{
+    display: flex;
+    justify-content: center;  
+    background-color: rgb(57, 56, 54);
+    width: 80%;
+}
+
+.ExperiencesTexte{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.ExperiencesTexte article{
+    color: white;
+    text-shadow: 1px 1px 2px gray;
+}
+
+.ExperiencesTexte h2{
+    display: flex;
+    justify-content: center;
+}
+
+#Contacts{
+    background-color: rgb(35, 33, 30);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: 4px 3px 2px white;
+    border: 2px solid rgb(214, 208, 208);
+}
+
+#Projets{
+    background-color: rgb(35, 33, 30);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: 4px 3px 2px white;
+    border: 2px solid rgb(214, 208, 208);
+}
+
+@media screen and (max-width: 600px) {
+    .corpsPage{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .Moi div p{
+        font-size: x-small;
+    }
+    .Moi h2{
+        font-size: smaller;
+    }
+    .Moi{
+        width: 65%;
+        height: auto;
+        padding: 10px; 
+        box-sizing: border-box;
+        position: relative;
+        top: 10%; 
+        left:20%;
+        word-wrap: break-word; 
+        overflow-wrap: break-word; 
+        overflow: hidden; 
+        max-height: 80%; 
+    }
+    .PhotoDeMoi {
+        width: 100%;
+    }
 }
