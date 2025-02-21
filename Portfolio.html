@@ -53,7 +53,7 @@
             </div>
         </section>
         <section id="Formations">
-            <h3>Formations</h3>
+            <h2>Formations</h2>
             <div class="ConteneurFormation">
                 <div class="friseChrono">
                     <div class="timeline-item">
@@ -147,17 +147,58 @@
             <div>
                 <h2>Mes projets</h2>
                 <div class="videoCode">
-                    <video class="video" src="videoProjetSnake.mp4"></video>
-                    <button type="button"></button>
+                    <div class="TexteSnake">
+                        <article class="ConteneurTexteSnake">
+                            <h2>Snake</h2>
+                            <p>Un projet Classique auquel la plupart des développeurs ont été confronté. Codé en python, ce projet a été celui
+                            qui inité la passion que j'ai pour l'informatique. Il aborde des concepts assez complexes comme la programmation orienté objet de manière très simple.
+                            J'ai réalisé ce projet seul et en autodidacte après avoir appris les bases du langage de programmation Python.
+                            Ce dernier m'a apporté des connaissance en...
+                            </p>
+                            <p>
+                                Voici le lien vers le
+                                <a href="https://github.com/clementsellier/Snake-Python">code source</a>
+                            </p>
+                            </article>
+                    </div>
+                    <div class="ConteneurVideoCodeSnake">
+                        <video class="videoCodeSnake" controls loop>
+                            <source src="Videos/VideoProjetSnake.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="ConteneurVideoSnakeJeu">
+                        <video class="videoSnake" controls loop>
+                            <source src="Videos/VideoSnakeJeu.mp4" type="video/mp4">
+                        </video>
+                    </div>
                 </div>
             <div>
         </section>
         <section id="Contacts">
-            <div>
+            <div class="ContactsConteneur">
                 <h2>Contacts</h2>
-                <article>
-                    Blablabla
-                </article>
+                <form class="formulaire">
+                    <div class="email">    
+                        <label for="email">Votre mail:</label>
+                        <br>
+                        <input type="email" id="email" name="email" required>
+                    </div>    
+                    <div class="objet">    
+                        <label for="objet">Objet:</label>
+                        <br>
+                        <input type="text" id="objet" name="Objet" required>
+                    </div>    
+                    <div class="message">    
+                        <label for="message">Message:</label>
+                        <br>
+                        <input type="text" id="message" name="message" class="message" required>
+                    </div>  
+                    <div class="submit">
+                        <div class="submitbutton">
+                            <input type="submit" value="Envoyer"/>
+                        </div>
+                    </div>
+                </form>
             <div>
         </section>
     </section>

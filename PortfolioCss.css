@@ -6,10 +6,6 @@ body{
     justify-content: space-between;
 }
 
-p{
-    color: black;
-}
-
 h1, h2, h3, h4, h5, h6{
     color: beige;
 }
@@ -258,26 +254,8 @@ span div article, h1, h2,h4, h5, h6{
     color: #787877;
 }
 
-@media (max-width: 768px) {
-    .friseChrono::before {
-        left: 20px;
-    }
-    
-    .timeline-item {
-        width: 100%;
-        margin-left: 0;
-        padding-left: 40px;
-        text-align: left;
-    }
-    
-    .timeline-item::after {
-        left: 14px !important;
-        right: auto !important;
-    }
-    
-    .timeline-item:nth-child(even) {
-        margin-left: 0;
-    }
+#Formations{
+    text-align: center;
 }
 
 .MesFormations{
@@ -379,21 +357,126 @@ span div article, h1, h2,h4, h5, h6{
 #Projets{
     display: flex;
     justify-content: center;
-    flex-direction: column;
+    text-align: center;
 }
 
 .videoCode{
-    width: 25%;
-    height: 53%;
     position: relative;
-    background-color: #5d605d;
-    border-radius: 5px;
-    border:2px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    overflow: hidden;
+    margin: 30px;
 }
 
-.video{
-    width: 250px;
-    height: 350px;
+.TexteSnake{
+    width: 50%;
+}
+
+.TexteSnake article h2{
+    text-align: center;
+}
+
+.ConteneurTexteSnake{
+    width: 50%;
+    left: 25%;
+    position: relative;
+    background-color: rgb(35, 33, 30);
+    border:2px solid black;
+    box-shadow: 2px 2px 2px white;
+    border-radius:15px;
+    margin: 30px;
+}
+
+.ConteneurTexteSnake p,h2 {
+    margin: 10px;
+}
+
+.ConteneurVideoCodeSnake{
+    background-color: rgb(35, 33, 30);
+    border: 2px solid black;
+    box-shadow: 2px 2px 2px white;
+    border-radius: 15px;
+    height: auto;
+    width: 25%;
+    height: 50%;
+}
+
+.ConteneurVideoSnakeJeu{
+    position: absolute;
+    background-color: rgb(35, 33, 30);
+    border: 2px solid black;
+    box-shadow: 2px 2px 2px white;
+    border-radius: 15px;
+    height: auto;
+    width: 10%;
+    height: 75%;
+    overflow: hidden;
+    z-index: 1;
+    right: 17%;
+    top: 5%;
+}
+
+.videoCodeSnake{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.videoSnake{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#Contacts{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.ContactsConteneur{
+    background-color:  rgb(35, 33, 30);
+    width: 30%;
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px white;
+}
+
+.ContactsConteneur h2{
+    text-align: center;
+}
+
+.formulaire div{
+    width: 100%;
+}
+
+.formulaire div label{
+    color:  rgb(184, 179, 179);
+    font-size: 14px;
+}
+
+.email{
+    width: 100%;
+} 
+.objet{
+    width: 100%;
+} 
+.message{
+    width: 100%;
+}
+
+.submit{
+    display: flex;
+    justify-content: center;
+}
+
+.submitbutton{
+    width: 25%;
+}
+
+.message{
+    height: 50px;
 }
 
 @media screen and (max-width: 600px) {
@@ -422,5 +505,27 @@ span div article, h1, h2,h4, h5, h6{
     }
     .PhotoDeMoi {
         width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .friseChrono::before {
+        left: 20px;
+    }
+    
+    .timeline-item {
+        width: 100%;
+        margin-left: 0;
+        padding-left: 40px;
+        text-align: left;
+    }
+    
+    .timeline-item::after {
+        left: 14px !important;
+        right: auto !important;
+    }
+    
+    .timeline-item:nth-child(even) {
+        margin-left: 0;
     }
 }
