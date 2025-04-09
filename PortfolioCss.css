@@ -6,8 +6,8 @@ body{
     justify-content: space-between;
 }
 
-h1, h2, h3, h4, h5, h6{
-    color: beige;
+* h2{
+    font-size: 45px;
 }
 
 header {
@@ -68,24 +68,25 @@ header nav span{
 header nav span a{
     text-decoration: none;
     height: auto;
+    font-size: 25px;
 }
-
 
 a:link{
     color: beige;
 }
 
-nav span a:hover .nav{    
-    background-image: linear-gradient(beige, transparent);
+nav span a:hover{    
+    background-image:linear-gradient(beige, white);
+}
+
+nav span a:hover:link{
+    color: black;
 }
 
 a:visited{
     color: beige;
 }
 
-span div article, h1, h2,h4, h5, h6{
-    color: black;
-}
 
 .corpsPage{
     background-color: rgb(31, 31, 31);
@@ -93,7 +94,28 @@ span div article, h1, h2,h4, h5, h6{
     flex-direction: column;
 }
 
-#Accueil{
+#Identite{
+    display: flex;
+    justify-content: center;
+    background-image: url("Photo/photo-fond-image-accueil.avif");
+    background-repeat: no-repeat;
+    background-size:cover;
+    text-align: center;
+    text-decoration-color: white;
+    margin-top: 30px;
+    height:400px;
+} 
+
+.IdentiteMoi article *{
+    color: white;
+}
+
+.IdentiteMoi article h1{
+    margin-top: 150px;
+    font-size: 45px;
+}
+
+#A-propos-de-moi{
     display: flex;
     width: 100%;
 }
@@ -102,12 +124,16 @@ span div article, h1, h2,h4, h5, h6{
     color: rgb(184, 179, 179);
 }
 
+* article p{
+    font-size: larger;
+}
+
 .placeMoi{
     width:60%;
 }
 
 .placePhoto{
-    flex-grow: 1;
+    width: 40%;
 }
 
 .Moi {
@@ -115,8 +141,8 @@ span div article, h1, h2,h4, h5, h6{
     border: 2px solid black;
     box-shadow: 2px 2px 2px white;
     border-radius: 15px;
-    width: 65%;
-    height: auto;
+    width: 75%;
+    height: 70%;
     padding: 20px;
     box-sizing: border-box;
     position: relative;
@@ -124,10 +150,19 @@ span div article, h1, h2,h4, h5, h6{
     left: 20%;
     word-wrap: break-word;
     overflow-wrap: break-word;
-    max-height: 80%;
     overflow-y: scroll; 
     scrollbar-color: grey transparent;
     scrollbar-width: thin; 
+    text-align: center;
+    font-size: 25px;
+}
+
+.Moi h2{
+    font-size: 35px;
+}
+
+.texteMoi{
+    text-align: left;
 }
 
 ::-webkit-scrollbar {
@@ -152,20 +187,24 @@ span div article, h1, h2,h4, h5, h6{
     border: 2px solid black;
     box-shadow: 2px 2px 2px white;
     border-radius: 15px;
-    width: 50%;
+    width: 35%;
     height: 65%;
     overflow: hidden; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
     top: 20%;
     left:40%;
+     
 }
 
 .PhotoDeMoi {
     width: 100%;
     height: 100%;
     object-fit: cover;  
+}
+
+#Formations{
+    text-align: center;
+    max-height: 800px;
+    margin: 50px;
 }
 
 .ConteneurFormation{
@@ -190,7 +229,7 @@ span div article, h1, h2,h4, h5, h6{
     position: absolute;
     left: 50%;
     top: 0;
-    height: 100%;
+    height: 75%;
     width: 2px;
     background: #ccc;
     transform: translateX(-50%);
@@ -251,11 +290,11 @@ span div article, h1, h2,h4, h5, h6{
 }
 
 .timeline-content h3{
-    color: #787877;
+    font-size: 20px;
 }
 
-#Formations{
-    text-align: center;
+.timeline-content h5{
+    font-size: 15px;
 }
 
 .MesFormations{
@@ -269,19 +308,52 @@ span div article, h1, h2,h4, h5, h6{
 
 .MesFormations article{
     background-color: rgb(184, 179, 179);
-    width:75%;
-}
-.MesFormations article{
+    width:80%;
     background-color: rgb(35, 33, 30);
     border:2px solid black;
     box-shadow: 2px 2px 2px white;
     border-radius:15px;
 }
 
+.MesFormations article p{
+    margin: 10px;
+    font-size: x-large;
+}
+
+#Qualites{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 30px;
+    text-align: center;
+}
+
+.Conteneur-Qualites div {
+    background-color:  rgb(35, 33, 30);
+    width: 30%;
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px white;   
+    border: 2px solid black ;
+    text-align: center;
+    margin: 50px;
+}
+
+.Conteneur-Qualites div article p{
+    margin: 10px;
+    font-size: 25px;
+    padding: 20px;
+}
+
+.Conteneur-Qualites{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
 #Competences{
     display: flex;
     justify-content: center;
-    margin: 30px;
+    margin: 150px;
 }
 
 .ConteneurCompetences{
@@ -292,7 +364,7 @@ span div article, h1, h2,h4, h5, h6{
     border: 2px solid black;
     border-radius:10px ;
     text-align: center;
-    width: 60%;
+    width: 70%;
     height: 100%;
     box-shadow: 2px 2px 2px white;   
 }
@@ -329,6 +401,12 @@ span div article, h1, h2,h4, h5, h6{
     width: 50%;
 }
 
+.asterix{
+    font-size: small;
+    background-color: none;
+    color: rgb(184, 179, 179);
+}
+
 #file{
     width: 50%;
 }
@@ -336,6 +414,7 @@ span div article, h1, h2,h4, h5, h6{
 
 #Experiences{
     display: flex;
+    flex-direction:row;
     justify-content: center;  
     text-align: center;
     margin: 30px;
@@ -348,16 +427,26 @@ span div article, h1, h2,h4, h5, h6{
     flex-direction: column;
 }
 
-#Contacts{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+.ExperiencesTexte article{
+    background-color: rgb(35, 33, 30);
+    border:2px solid black;
+    box-shadow: 2px 2px 2px white;
+    border-radius:15px;
+    font-size: 25px;
+    padding: 20px;
+    margin: 50px;
 }
 
 #Projets{
     display: flex;
     justify-content: center;
     text-align: center;
+}
+
+.video{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .videoCode{
@@ -386,6 +475,7 @@ span div article, h1, h2,h4, h5, h6{
     box-shadow: 2px 2px 2px white;
     border-radius:15px;
     margin: 30px;
+    font-size: 24px;
 }
 
 .ConteneurTexteSnake p,h2 {
@@ -398,23 +488,18 @@ span div article, h1, h2,h4, h5, h6{
     box-shadow: 2px 2px 2px white;
     border-radius: 15px;
     height: auto;
-    width: 25%;
-    height: 50%;
 }
 
 .ConteneurVideoSnakeJeu{
-    position: absolute;
+    position: relative;
     background-color: rgb(35, 33, 30);
     border: 2px solid black;
     box-shadow: 2px 2px 2px white;
     border-radius: 15px;
     height: auto;
-    width: 10%;
+    width: 20%;
     height: 75%;
     overflow: hidden;
-    z-index: 1;
-    right: 17%;
-    top: 5%;
 }
 
 .videoCodeSnake{
@@ -431,53 +516,48 @@ span div article, h1, h2,h4, h5, h6{
 
 #Contacts{
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
     width: 100%;
-}
-
-.ContactsConteneur{
-    background-color:  rgb(35, 33, 30);
-    width: 30%;
-    border-radius: 15px;
-    box-shadow: 2px 2px 2px white;
-}
-
-.ContactsConteneur h2{
     text-align: center;
 }
 
-.formulaire div{
-    width: 100%;
-}
-
-.formulaire div label{
-    color:  rgb(184, 179, 179);
-    font-size: 14px;
-}
-
-.email{
-    width: 100%;
-} 
-.objet{
-    width: 100%;
-} 
-.message{
-    width: 100%;
-}
-
-.submit{
+.ContactsConteneur {
     display: flex;
     justify-content: center;
+    flex-direction: row;
 }
 
-.submitbutton{
-    width: 25%;
-}
-
-.message{
+.icone_gmail{
     height: 50px;
+    width: 50px;
+    margin: 50px;
 }
+
+.icone_telechargement{
+    height: 50px;
+    width: 50px;
+    margin: 50px;
+}
+
+.icone_telephone{
+    height: 50px;
+    width: 50px;
+    margin: 50px;
+}
+
+.telephoneContacts{
+    display: flex;
+    flex-direction: column;
+}
+
+.numtel{
+    color: rgb(184, 179, 179);
+    position: absolute;
+    margin-top: 95px;
+    margin-left: 27px;
+}
+
+
 
 @media screen and (max-width: 600px) {
     .corpsPage{
@@ -502,9 +582,6 @@ span div article, h1, h2,h4, h5, h6{
         overflow-wrap: break-word; 
         overflow: hidden; 
         max-height: 80%; 
-    }
-    .PhotoDeMoi {
-        width: 100%;
     }
 }
 
