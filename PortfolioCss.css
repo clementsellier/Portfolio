@@ -97,7 +97,7 @@ a:visited{
 #Identite{
     display: flex;
     justify-content: center;
-    background-image: url("Photo/photo-fond-image-accueil.avif");
+    background-image: url("Photo/PhotoAccueil.jpg");
     background-repeat: no-repeat;
     background-size:cover;
     text-align: center;
@@ -143,7 +143,7 @@ a:visited{
     border-radius: 15px;
     width: 75%;
     height: 70%;
-    padding: 20px;
+    padding: 40px;
     box-sizing: border-box;
     position: relative;
     top: 10%;
@@ -187,11 +187,11 @@ a:visited{
     border: 2px solid black;
     box-shadow: 2px 2px 2px white;
     border-radius: 15px;
-    width: 35%;
-    height: 65%;
+    width: 300px;
+    height: 550px;
     overflow: hidden; 
     top: 20%;
-    left:40%;
+    left:30%;
      
 }
 
@@ -317,7 +317,7 @@ a:visited{
 
 .MesFormations article p{
     margin: 10px;
-    font-size: x-large;
+    font-size: 24px;
 }
 
 #Qualites{
@@ -338,9 +338,9 @@ a:visited{
     margin: 50px;
 }
 
-.Conteneur-Qualites div article p{
+.Conteneur-Qualites p{
     margin: 10px;
-    font-size: 25px;
+    font-size: 27px;
     padding: 20px;
 }
 
@@ -449,7 +449,7 @@ a:visited{
     flex-direction: column;
 }
 
-.videoCode{
+.Snake{
     position: relative;
     display: flex;
     flex-direction: row;
@@ -459,7 +459,7 @@ a:visited{
 }
 
 .TexteSnake{
-    width: 50%;
+    width: 110%;
 }
 
 .TexteSnake article h2{
@@ -476,6 +476,11 @@ a:visited{
     border-radius:15px;
     margin: 30px;
     font-size: 24px;
+    padding: 25px;
+}
+
+.ConteneurTexteSnake{
+    width: 60%;
 }
 
 .ConteneurTexteSnake p,h2 {
@@ -483,11 +488,13 @@ a:visited{
 }
 
 .ConteneurVideoCodeSnake{
+    position: relative;
     background-color: rgb(35, 33, 30);
     border: 2px solid black;
     box-shadow: 2px 2px 2px white;
     border-radius: 15px;
-    height: auto;
+    height: 40%;
+    margin: 80px;
 }
 
 .ConteneurVideoSnakeJeu{
@@ -496,9 +503,9 @@ a:visited{
     border: 2px solid black;
     box-shadow: 2px 2px 2px white;
     border-radius: 15px;
-    height: auto;
-    width: 20%;
-    height: 75%;
+    width: 25%;
+    height: 30%;
+    margin-bottom: 10px;
     overflow: hidden;
 }
 
@@ -514,17 +521,97 @@ a:visited{
     object-fit: cover;
 }
 
+.JeuMonstres{
+    display: flex;
+    justify-content: center;
+}
+
+.ConteneurJeuMonstres{
+    width: 80%;
+    position: relative;
+    background-color: rgb(35, 33, 30);
+    border:2px solid black;
+    box-shadow: 2px 2px 2px white;
+    border-radius:15px;
+    margin: 30px;
+    font-size: 24px;
+    text-align: left;
+    padding: 40px;
+}
+
+.StockageDonnees{
+    display: flex;
+    flex-direction: row;
+    margin-top: 100px;
+}
+
+.TexteFichierMonstres{
+    width: 50%;
+}
+
+.PhotoFichierMonstres{
+    position: relative;
+    height: 250px;
+    width: 500px;
+    margin-left:150px;
+    flex-grow: 0.5;
+}
+
+.DeroulementPartie{
+    display: flex;
+    flex-direction: row;
+    margin-top: 100px;
+}
+
+.PhotoCodeDeroulementPartie{
+    margin-right:80px;
+    height: 350px;
+    width: 600px;
+}
+
+.PhotoCodeDeroulementPartie:hover{
+    position: relative;
+    height: 500px;
+    width:  900px;
+}
+
+.PhotoCodeDeroulementPartie:hover .TexteDeroulementPartie p{
+    font-size: 15px;
+}
+
+.TexteDeroulementPartie{
+    width: 50%;
+}
+
+.PartieEnCours{
+    display: flex;
+    flex-direction: row;
+    margin-top: 100px;
+}
+
+.PhotoPartieEnCours{
+    position: relative;
+    height: 500px;
+    width:  900px;
+    margin: 25px;
+}
+
 #Contacts{
     display: flex;
     flex-direction: column;
     width: 100%;
     text-align: center;
+    margin-top: 100px;
 }
 
 .ContactsConteneur {
     display: flex;
     justify-content: center;
     flex-direction: row;
+}
+
+.TexteContact{
+    font-size: 25px;
 }
 
 .icone_gmail{
@@ -556,8 +643,6 @@ a:visited{
     margin-top: 95px;
     margin-left: 27px;
 }
-
-
 
 @media screen and (max-width: 600px) {
     .corpsPage{
