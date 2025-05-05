@@ -644,6 +644,13 @@ a:visited{
     margin-left: 27px;
 }
 
+.CVTelechargeable{
+    color: rgb(184, 179, 179);
+    position: absolute;
+    margin-top: -55px;
+    margin-left: 15px;
+}
+
 @media screen and (max-width: 600px) {
     .corpsPage{
         flex-direction: column;
