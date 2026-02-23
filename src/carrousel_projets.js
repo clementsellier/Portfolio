@@ -33,6 +33,19 @@ const projets = [
         videos: [
             { src: "../../Videos/Cops'n_robber_video_partie.mp4", description: "Partie en cours (Le policier capture le voleur ce qui mets fin à la partie)" }
         ]
+    },
+    {
+        id: 4,
+        nom: "Qawale",
+        description:"Le Qawale est un jeu dérivé du puissance 4 qui se joue avec des galets. Le but étant d'aligner 4 ou plus galets de la même couleur en les plaçant puis ensuite les émiétter sur le plateau pour remporter la partie.",
+        details: "Ce projet a été réalisé en groupe dans le cadre de ma formation. Nous avons utilisé le langage C#développer ce jeu. Le but de ce projet était de nous familiariser avec le développement en C# ainsi que d'en apprendre plus sur ce qu'était les tests unitaires et leur importances, ainsi que d'appliquer nos connaissances en programmation orientée objet et en design de jeux.",
+        image: [
+            "../../Photo/Qawale_plateau_jeu.png"
+        ],
+        lienGithub: "https://github.com/clementsellier/Qawale",
+        videos: [
+            { src: "../../Videos/Partie_Qawale_Vid.mp4", description: "Partie en cours contre une IA de niveau difficile" }
+        ]
     }
 ];
 
