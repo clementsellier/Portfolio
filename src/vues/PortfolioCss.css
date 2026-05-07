@@ -30,7 +30,7 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 30px;
+    height: auto;        
     z-index: 100;
 }
 
@@ -105,12 +105,12 @@ nav span a:hover:link{
     color: black;
 }
 
-.corpsPage{
+.corpsPage {
     background-color: rgb(31, 31, 31);
     display: flex;
     flex-direction: column;
+    width: 100%;         
 }
-
 #Identite{
     display: flex;
     justify-content: center;
@@ -1019,11 +1019,10 @@ body.modal-open {
     left: 56%;
 }
 
-.numtel{
+.numtel {
     color: rgb(184, 179, 179);
-    position: absolute;
-    margin-top: 95px;
-    margin-left: 27px;
+    position: static;   
+    margin-left: 0;
 }
 
 /* ============================================
@@ -1053,9 +1052,38 @@ body.modal-open {
    ============================================ */
 @media (max-width: 768px) {
 
-    /* Navigation */
-    header nav span a {
-        font-size: 16px;
+    /* Navigation — transformation en menu burger */
+        .NavFont {
+        height: auto;
+        background-color: rgb(31, 31, 31);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 5px 0;
+        overflow: visible;
+    }
+
+    .burger-btn {
+        display: block;
+    }
+
+    .Liens {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: rgb(31, 31, 31);
+        padding: 10px 0;
+        gap: 8px;
+    }
+
+    .Liens.open {
+        display: flex;
+    }
+
+    .Liens span a {
+        font-size: 18px;
+        width: 160px;
+        text-align: center;
     }
 
     /* Identité */
@@ -1422,37 +1450,3 @@ body.modal-open {
     z-index: 101;
 }
 
-@media (max-width: 768px) {
-    .NavFont {
-        height: auto;
-        background-color: rgb(31, 31, 31);
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 5px 0;
-        overflow: visible;
-    }
-
-    .burger-btn {
-        display: block;
-    }
-
-    .Liens {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        background-color: rgb(31, 31, 31);
-        padding: 10px 0;
-        gap: 8px;
-    }
-
-    .Liens.open {
-        display: flex;
-    }
-
-    .Liens span a {
-        font-size: 18px;
-        width: 160px;
-        text-align: center;
-    }
-}
