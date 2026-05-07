@@ -1,3 +1,8 @@
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 body{
     background-color: rgb(31, 31, 31);
     display: flex;
@@ -18,7 +23,7 @@ header {
     z-index: 100;
 }
 
-.nav{
+.nav {
     top: 0;
     width: 100%;
     position: fixed;
@@ -30,26 +35,50 @@ header {
 }
 
 .NavFont {
-    display: flex; 
-    flex-direction: column; 
+    display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 30px; 
-    left: 50%; 
-    transform: translateX(-50%); 
-    background-image: linear-gradient(rgb(31, 31, 31), transparent);
-    overflow: hidden; 
+    height: 40px;
+    background-color: rgb(31, 31, 31);
     width: 100%;
     z-index: 100;
-    position: absolute;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: visible;
+    gap: 5px;
+    padding: 0 10px;
 }
 
-.Liens{
+.Liens {
     display: flex;
-    width: 100%;
     flex-direction: row;
-    justify-items: end;
-    z-index: auto;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+
+.Liens span a {
+    text-decoration: none;
+    font-size: 16px;
+    color: beige;
+    padding: 5px 12px;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.07);
+    transition: background-color 0.2s ease, color 0.2s ease;
+    display: inline-block;
+}
+
+.Liens span a:hover {
+    background-color: rgba(255, 255, 255, 0.18);
+    background-image: none;
+    color: white;
+}
+
+a:visited {
+    color: beige;
 }
 
 header nav span{
@@ -74,10 +103,6 @@ nav span a:hover{
 
 nav span a:hover:link{
     color: black;
-}
-
-a:visited{
-    color: beige;
 }
 
 .corpsPage{
@@ -1380,5 +1405,54 @@ body.modal-open {
     .ExperiencesTexte article {
         padding: 12px;
         font-size: 14px;
+    }
+}
+
+/* ============================================
+   BURGER MENU
+   ============================================ */
+.burger-btn {
+    display: none;
+    background: transparent;
+    border: none;
+    color: beige;
+    font-size: 28px;
+    cursor: pointer;
+    padding: 5px 15px;
+    z-index: 101;
+}
+
+@media (max-width: 768px) {
+    .NavFont {
+        height: auto;
+        background-color: rgb(31, 31, 31);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 5px 0;
+        overflow: visible;
+    }
+
+    .burger-btn {
+        display: block;
+    }
+
+    .Liens {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: rgb(31, 31, 31);
+        padding: 10px 0;
+        gap: 8px;
+    }
+
+    .Liens.open {
+        display: flex;
+    }
+
+    .Liens span a {
+        font-size: 18px;
+        width: 160px;
+        text-align: center;
     }
 }

@@ -10,6 +10,23 @@
 </head> 
 
 <body>
+    <nav class="nav">
+        <div class="NavFont">
+            <button class="burger-btn" onclick="toggleMenu()" aria-label="Menu">
+                ☰
+            </button>
+            <div class="Liens" id="navLiens">
+                <span><a href="#Identite">Accueil</a></span>
+                <span><a href="#A-propos-de-moi">À propos</a></span>
+                <span><a href="#Formations">Formations</a></span>
+                <span><a href="#Qualites">Qualités</a></span>
+                <span><a href="#Competences">Compétences</a></span>
+                <span><a href="#Experiences">Expériences</a></span>
+                <span><a href="#Projets">Projets</a></span>
+                <span><a href="#Contacts">Contacts</a></span>
+            </div>
+        </div>
+    </nav>
     <section class="corpsPage">
         <section id="Identite">
             <div class="IdentiteMoi">
@@ -251,4 +268,16 @@
 </body>
 <script src="../carrousel_projets.js"></script>
 <script src="../competences.js"></script>
+<script>
+    function toggleMenu() {
+        const liens = document.getElementById('navLiens');
+        liens.classList.toggle('open');
+    }
+
+    document.querySelectorAll('.Liens a').forEach(link => {
+        link.addEventListener('click', () => {
+            document.getElementById('navLiens').classList.remove('open');
+        });
+    });
+</script>
 </html>
