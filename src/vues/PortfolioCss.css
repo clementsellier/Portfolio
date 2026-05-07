@@ -120,6 +120,7 @@ nav span a:hover:link{
     text-align: center;
     text-decoration-color: white;
     height:400px;
+    padding-top: 40px;
 } 
 
 .IdentiteMoi article *{
@@ -1067,11 +1068,11 @@ body.modal-open {
    ============================================ */
 @media (max-width: 768px) {
     .NavFont {
-        flex-direction: column;
-        align-items: flex-start;
-        height: auto;
-        min-height: 44px;
-        padding: 0;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        height: 44px;
+        padding: 0 15px;
         overflow: visible;
     }
 
@@ -1079,21 +1080,28 @@ body.modal-open {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 100%;
+        width: 44px;
         height: 44px;
-        font-size: 24px;
+        font-size: 22px;
         padding: 0;
-        text-align: center;
+        border-radius: 8px;
+        background-color: rgba(255, 255, 255, 0.08);
     }
 
     .Liens {
         display: none;
+        position: absolute;
+        top: 44px;
+        left: 0;
+        right: 0;
         flex-direction: column;
         align-items: stretch;
         width: 100%;
         padding: 8px 0;
-        gap: 4px;
+        gap: 0;
         background-color: rgb(31, 31, 31);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        z-index: 99;
     }
 
     .Liens.open {
@@ -1107,22 +1115,24 @@ body.modal-open {
     .Liens span a {
         display: block;
         width: 100%;
-        text-align: center;
-        font-size: 16px;
-        padding: 12px 0;
+        text-align: left;
+        font-size: 15px;
+        padding: 12px 20px;
         border-radius: 0;
         background-color: transparent;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
     }
 
     .Liens span a:hover {
-        background-color: rgba(255, 255, 255, 0.1);
+        background-color: rgba(255, 255, 255, 0.08);
+        padding-left: 28px;
+        transition: padding-left 0.2s ease;
     }
 
     /* Identité */
-    #Identite {
-        height: 280px;
-        padding-top: 40px;
+   #Identite {
+    padding-top: 44px;
+    height: 280px;
     }
 
     .IdentiteMoi article h1 {
