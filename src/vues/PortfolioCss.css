@@ -1001,76 +1001,384 @@ body.modal-open {
     margin-left: 27px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .CompetencesContainer {
-        flex-direction: column;
+/* ============================================
+   RESPONSIVE — TABLETTE (max 1024px)
+   ============================================ */
+@media (max-width: 1024px) {
+    .IdentiteMoi article h1 {
+        font-size: 50px;
     }
-    
+
+    .Conteneur-Qualites div {
+        width: 28%;
+        margin: 20px;
+    }
+
+    .Conteneur-Qualites p {
+        font-size: 20px;
+    }
+
+    .ExperiencesTexte {
+        width: 80%;
+    }
+}
+
+/* ============================================
+   RESPONSIVE — MOBILE (max 768px)
+   ============================================ */
+@media (max-width: 768px) {
+
+    /* Navigation */
+    header nav span a {
+        font-size: 16px;
+    }
+
+    /* Identité */
+    #Identite {
+        height: 280px;
+    }
+
+    .IdentiteMoi article h1 {
+        margin-top: 100px;
+        font-size: 38px;
+    }
+
+    .IdentiteMoi article h4 {
+        font-size: 15px;
+        padding: 0 10px;
+    }
+
+    /* À propos de moi — empilement vertical */
+    #A-propos-de-moi {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 15px;
+    }
+
+    .placeMoi {
+        width: 100%;
+        order: 2;
+    }
+
+    .placePhoto {
+        width: 100%;
+        order: 1;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .Moi {
+        width: 100%;
+        height: auto;
+        max-height: none;
+        overflow-y: visible;
+        position: static;
+        top: auto;
+        left: auto;
+        padding: 20px;
+        font-size: 16px;
+    }
+
+    .Moi h2 {
+        font-size: 26px;
+    }
+
+    .PhotoMoi {
+        position: static;
+        top: auto;
+        left: auto;
+        width: 160px;
+        height: 220px;
+    }
+
+    /* Formations */
+    #Formations {
+        margin: 20px 15px;
+        max-height: none;
+    }
+
+    #Formations h2 {
+        font-size: 30px;
+    }
+
+    .ConteneurFormation {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .friseChrono {
+        width: 100%;
+        margin: 0 0 20px 0;
+    }
+
     .friseChrono::before {
         left: 20px;
+        height: 90%;
     }
-    
+
     .timeline-item {
         width: 100%;
-        margin-left: 0;
-        padding-left: 40px;
-        text-align: left;
+        margin-left: 0 !important;
+        padding-left: 45px;
+        text-align: left !important;
     }
-    
+
     .timeline-item::after {
         left: 14px !important;
         right: auto !important;
     }
-    
-    .timeline-item:nth-child(even) {
-        margin-left: 0;
+
+    .timeline-content h3 {
+        font-size: 16px;
     }
-    
+
+    .timeline-content h5 {
+        font-size: 13px;
+    }
+
+    .MesFormations {
+        width: 90%;
+        margin: 0 auto 30px;
+    }
+
+    .MesFormations article {
+        width: 100%;
+    }
+
+    .MesFormations article p {
+        font-size: 16px;
+    }
+
+    /* Qualités — empilement vertical */
+    #Qualites {
+        margin: 20px 15px;
+    }
+
+    #Qualites h2 {
+        font-size: 30px;
+    }
+
+    .Conteneur-Qualites {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Conteneur-Qualites div {
+        width: 90%;
+        margin: 15px auto;
+    }
+
+    .Conteneur-Qualites p {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .Conteneur-Qualites h2 {
+        font-size: 24px;
+    }
+
+    /* Compétences */
+    #Competences {
+        width: calc(100% - 30px);
+        margin: 15px;
+    }
+
+    .CompetencesContainer {
+        flex-direction: column;
+    }
+
+    .CompetencesColumn {
+        max-width: 100%;
+    }
+
+    /* Modal Compétences */
+    .ModalContent {
+        padding: 25px 20px;
+        border-radius: 12px;
+    }
+
+    .ModalTitle {
+        font-size: 1.4em;
+    }
+
+    .ModalBody {
+        font-size: 1em;
+    }
+
+    /* Expériences — empilement vertical */
+    #Experiences {
+        flex-direction: column;
+        margin: 15px;
+    }
+
+    .ExperiencesTexte {
+        width: 100%;
+    }
+
+    .ExperiencesTexte article {
+        margin: 15px 0;
+        font-size: 16px;
+        padding: 15px;
+    }
+
+    .Texte1, .Texte2 {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    .BovisImage, .BovisImage2 {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        position: static;
+        top: auto;
+        margin: 10px auto;
+        display: block;
+    }
+
+    .Auchan {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .AuchanImage {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        margin: 10px auto;
+        display: block;
+    }
+
+    /* Projets */
+    #Projets {
+        margin: 20px 10px;
+    }
+
+    .carousel-container {
+        margin: 20px auto;
+    }
+
+    .projet-card {
+        flex: 0 0 260px;
+    }
+
+    .carousel-btn {
+        width: 38px;
+        height: 38px;
+        font-size: 22px;
+    }
+
+    /* Modal Projets */
     .modal-content {
-        width: 95%;
-        padding: 20px;
-        margin: 10% auto;
+        width: 92% !important;
+        padding: 20px !important;
+        margin: 20px auto !important;
+        max-height: 85vh !important;
     }
-    
+
     .modal-content h2 {
+        font-size: 24px !important;
+    }
+
+    .modal-content p {
+        font-size: 16px !important;
+    }
+
+    /* Contacts */
+    #Contacts {
+        padding: 15px;
+    }
+
+    .TexteContact {
+        font-size: 18px;
+        margin-top: 30px;
+    }
+
+    .ContactsConteneur {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .icone_gmail,
+    .icone_telechargement,
+    .icone_telephone {
+        height: 40px;
+        width: 40px;
+        margin: 15px;
+    }
+
+    .numtel {
+        position: static;
+        margin: 5px 0 0 0;
+        font-size: 14px;
+    }
+
+    .telephoneContacts {
+        align-items: center;
+    }
+
+    /* Titres globaux */
+    * h2 {
         font-size: 28px;
     }
-    
-    .modal-content p {
-        font-size: 18px;
-    }
 }
 
+/* ============================================
+   RESPONSIVE — PETIT MOBILE (max 480px)
+   ============================================ */
 @media (max-width: 480px) {
-    #Competences {
-        width: calc(100% - 3vw);
-        margin: 2vw 1.5vw;
-    }
-}
 
-@media screen and (max-width: 600px) {
-    .corpsPage{
-        flex-direction: column;
-        justify-content: center;
+    #Identite {
+        height: 230px;
     }
-    .Moi div p{
-        font-size: x-small;
+
+    .IdentiteMoi article h1 {
+        margin-top: 80px;
+        font-size: 30px;
     }
-    .Moi h2{
-        font-size: smaller;
+
+    .IdentiteMoi article h4 {
+        font-size: 13px;
     }
-    .Moi{
-        width: 65%;
-        height: auto;
-        padding: 10px; 
-        box-sizing: border-box;
-        position: relative;
-        top: 10%; 
-        left:20%;
-        word-wrap: break-word; 
-        overflow-wrap: break-word; 
-        overflow: hidden; 
-        max-height: 80%; 
+
+    .PhotoMoi {
+        width: 130px;
+        height: 180px;
+    }
+
+    .Moi {
+        font-size: 14px;
+        padding: 15px;
+    }
+
+    .Moi h2 {
+        font-size: 22px;
+    }
+
+    .Conteneur-Qualites div {
+        width: 95%;
+    }
+
+    .projet-card {
+        flex: 0 0 220px;
+    }
+
+    .SkillIcon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2em;
+    }
+
+    #Competences {
+        width: calc(100% - 20px);
+        margin: 10px;
+    }
+
+    .ExperiencesTexte article {
+        padding: 12px;
+        font-size: 14px;
     }
 }
