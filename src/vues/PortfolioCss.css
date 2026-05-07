@@ -1048,6 +1048,20 @@ body.modal-open {
 }
 
 /* ============================================
+   BURGER MENU
+   ============================================ */
+.burger-btn {
+    display: none;
+    background: transparent;
+    border: none;
+    color: beige;
+    font-size: 28px;
+    cursor: pointer;
+    padding: 5px 15px;
+    z-index: 101;
+}
+
+/* ============================================
    RESPONSIVE — MOBILE (max 768px)
    ============================================ */
 @media (max-width: 768px) {
@@ -1454,17 +1468,5 @@ body.modal-open {
     }
 }
 
-/* ============================================
-   BURGER MENU
-   ============================================ */
-.burger-btn {
-    display: none;
-    background: transparent;
-    border: none;
-    color: beige;
-    font-size: 28px;
-    cursor: pointer;
-    padding: 5px 15px;
-    z-index: 101;
-}
+
 
