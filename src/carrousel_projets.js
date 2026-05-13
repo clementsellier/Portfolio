@@ -134,9 +134,10 @@ function initialiserCarrousel() {
             track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
         }
     });
-    
+
     nextBtn.addEventListener('click', () => {
-        const maxIndex = projets.length - Math.floor(track.parentElement.offsetWidth / cardWidth);
+        const visibleCards = Math.floor(track.parentElement.offsetWidth / cardWidth);
+        const maxIndex = Math.max(0, projets.length - visibleCards);
         if (currentIndex < maxIndex) {
             currentIndex++;
             track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
