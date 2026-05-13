@@ -136,14 +136,16 @@ function initialiserCarrousel() {
     });
 
     nextBtn.addEventListener('click', () => {
-        const visibleCards = Math.floor(track.parentElement.offsetWidth / cardWidth);
-        const maxIndex = Math.max(0, projets.length - visibleCards);
-        if (currentIndex < maxIndex) {
+        const cardWidth = track.children[0].offsetWidth;
+        const trackWidth = track.parentElement.offsetWidth;
+        const maxTranslate = track.scrollWidth - trackWidth;
+        const newTranslate = Math.min((currentIndex + 1) * cardWidth, maxTranslate);
+
+        if (currentIndex < projets.length - 1) {
             currentIndex++;
-            track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+            track.style.transform = `translateX(-${newTranslate}px)`;
         }
     });
-}
 
 // Gestion de la modale - VERSION DEBUG
 function initialiserModal() {
