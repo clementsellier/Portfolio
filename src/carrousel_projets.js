@@ -126,8 +126,8 @@ function initialiserCarrousel() {
     const prevBtn = document.getElementById('prevBtn');
     const nextBtn = document.getElementById('nextBtn');
     let currentIndex = 0;
-    const cardWidth = 320; 
-    
+    const cardWidth = 320;
+
     prevBtn.addEventListener('click', () => {
         if (currentIndex > 0) {
             currentIndex--;
@@ -138,14 +138,15 @@ function initialiserCarrousel() {
     nextBtn.addEventListener('click', () => {
         const cardWidth = track.children[0].offsetWidth;
         const trackWidth = track.parentElement.offsetWidth;
-        const maxTranslate = track.scrollWidth - trackWidth;
-        const newTranslate = Math.min((currentIndex + 1) * cardWidth, maxTranslate);
+        const visibleCards = Math.floor(trackWidth / cardWidth);
+        const maxIndex = projets.length - visibleCards;
 
-        if (currentIndex < projets.length - 1) {
+        if (currentIndex < maxIndex) {
             currentIndex++;
-            track.style.transform = `translateX(-${newTranslate}px)`;
+            track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
         }
     });
+}
 
 // Gestion de la modale - VERSION DEBUG
 function initialiserModal() {
